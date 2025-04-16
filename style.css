@@ -1,0 +1,392 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar Styles */
+    nav{
+        width: 80%;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 6%;
+    }
+
+    nav .logo{
+        width: 135px;
+        padding: 10px 0;
+    }
+
+    nav ul{
+        padding: 0 20px;
+    }
+
+    nav ul li{
+        display: inline-block;
+        margin: 0 2px;
+        text-align: center;
+        padding: 20px 0;
+
+    }
+
+    nav ul li a{
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px 7rem;
+        text-decoration: none;
+    }
+
+    nav ul li.active{
+        border-bottom: 0.15em solid #000;
+    }
+/* End Navbar Styles */
+
+/* Hero Section / Head Section */
+
+    .head-section{
+        height: 60vh;
+        width: 100%;
+        background: #00C1AE;
+    }
+
+    .head-section .head-container{
+        width: 100%;
+        height: 100%;
+        margin: auto;;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head-container .head-left{
+        margin-top: 3rem;
+        margin-right: -0.5rem;
+        z-index: 1;
+    }
+
+    .head-container .head-right{
+        margin-top: -3rem;
+        padding: 0;
+    }
+
+    .head-img-1{
+        width: 25rem;
+        height: 15rem;
+        box-shadow: 0.2rem 0.2rem 1rem #000;
+        border-radius: 13px;
+        margin-bottom: 10px;
+    }
+
+    .head-img-2{
+        width: 30.8rem;
+        box-shadow: 0.2rem 0.2rem 1rem #000;
+        border-radius: 13px;
+        z-index: 1;
+    }
+
+    .head-left .head-txt{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 0.1px;
+        margin-bottom: 10px;
+    }
+
+    .head-left .head-p{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .head-left .head-btn{
+        padding: 1.2rem 4rem;
+        margin: 10px 0;
+        background: #000;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+/* End Hero Section / Head Section */
+
+/* Why us section */
+
+    .whyus-section{
+        width: 100%;
+        padding: 5%;
+        min-height: 50vh;
+        background: #fff;
+    }
+
+    .whyus-contianer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whyus-header{
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    /* Notes Style Section */
+        .whyus-notes{
+            width: 87%;
+            padding: 3%;
+            margin: auto;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .notes{
+            width: 18rem;
+            height: 18rem;
+            margin: 0 10px;
+            padding: 10px;
+        }
+
+        .notes .note-emoji{
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .notes .note-head{
+            font-size: 19px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .notes .note-p{
+            font-size: 14px;
+            font-weight: 400;
+        }
+    /* End Notes Style Section */
+    
+    /* Car Selection */
+
+        .select-city{
+            width: 65%;
+            margin: auto;
+            padding: 1rem;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            transition: all 0.8s;
+        }
+
+
+        .select-city .city-btn a{
+            font-size: 16px;
+            color: #000;
+            padding: 10px 20px;
+            outline: 0.1rem solid #010101;
+            border-radius: 10px;
+        }
+
+        .select-city .city-btn:hover{
+            margin: 0 15px;
+            scale: 1.2;
+            cursor: pointer;
+        }
+
+        .select-city .city-btn .active{
+            background: #010101;
+            color: #fff;
+            outline: none;
+        }
+    /* End Car Selection */
+
+    /* Car Logo Section */
+        .logo-grid{
+            width: 60%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(4,  1fr);
+            grid-template-rows:  65px 150px 150px;
+            grid-template-areas: 
+            "   text1   text2   text3   text4"
+            "   toy   lex   hond   benz"
+            "   niss   ford   lrov   acura"
+            ;
+            justify-items: center;
+            align-items: center;
+            gap: 0.5rem;
+
+        }
+
+        .logo-grid .lg{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .logo-grid .lAmount{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            background: #EBF2F7;
+            border-radius: 20px;
+            margin: auto auto;
+        }
+
+        .logo-grid .lAmount, .logo-grid .lg a{
+            font-size: 15px;
+            font-weight: 400;
+            color: #000;
+        }
+    /* End Car Logo Section */
+
+    /* Car Grid */
+    .car-grid{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10rem;
+        background: #EBF2F7;
+        border-radius: 5rem 5rem 0 0;
+    }
+
+    .car-grid .input{
+        width: 60%;
+        margin: .5rem auto;
+        padding: 15px 4rem 15px 15px;
+        border-radius: 10px;
+        border: .2rem solid lightblue;
+    }
+
+    .car-grid .container{
+        width: 100%;
+        margin: 2rem auto;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(4, 292px);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .car-grid .car-card{
+        width: 100%;
+        height: 24.5rem;
+        border-radius: 7px;
+        overflow: hidden;
+        border: 0.1rem solid lightblue;
+    }
+
+    .car-grid .car-card .car-img{
+        width: 100%;
+        height: 55%;
+    }
+
+    .car-grid .car-card p{
+        padding: 10px 10px 5px 10px;
+        color: #333;
+    }
+
+    .car-grid .car-card .car-price{
+        color: #00C1AE;
+        text-shadow: -.5px -.5px #00C1AE;
+        font-weight: 700;
+    }
+
+    .car-grid .car-card .car-loc{
+        font-size: 12px;
+        padding-left: 1.5rem;
+    }
+
+    .car-grid .car-card .how-used{
+        display: flex;
+    }
+
+    .car-grid .car-card .how-used p{
+        background: #EBF2F7;
+    }
+
+    .car-grid .morecar-btn{
+        width: 25%;
+        margin: 1rem auto;
+        border-radius: 10px;
+        padding: 1rem 4rem;
+        background: #010101;
+    }
+
+    .car-grid .morecar-btn a{
+        font-weight: 600;
+        color: #fff;
+        width: 100%;
+    }
+    /* End Car Grid */
+/* End Why us section */
+
+/* How it Works section */
+    .howit-works{
+        width: 100%;
+        height: 70vh;
+        margin: 0;
+        padding: 0;
+        background: #00C1AE;
+        position: relative;
+    }
+
+    .howit-works .dealer-card{
+        position: absolute;
+        top: -9rem;
+        width: 60%;
+        flex-direction: row;
+        background: #ffffff;
+        padding: 10px 3rem;
+        border-radius: 30px;
+    }
+
+    .howit-works .dealer-card .dealer-txt{
+        width: 50%;
+    }
+
+    .howit-works .dealer-card .dealer-img{
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .howit-works .howit-card{
+        width: 100%;
+        height: 100%;
+        flex-direction: row; 
+        justify-content: space-between;
+        background: brown;
+        overflow: hidden;
+    }
+
+    .howit-works .howit-card .card{
+        width: 20rem;
+        height: 25rem;
+        background: #EBF2F7;
+        justify-content: space-between;
+        margin: 2rem;
+    }
+
+    .howit-card .card img{
+        width: 12rem;
+    }
+
+/* End How it Works section */
+
