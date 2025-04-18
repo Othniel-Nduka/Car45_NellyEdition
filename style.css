@@ -1,24 +1,45 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    border: none;
-    outline: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
-}
+/* Imported Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* End Imported Font */
 
-.center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
+/* General Styles */
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+        border: none;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+    }
+
+    .center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .more-btn{
+        width: 25%;
+        margin: 1rem auto;
+        border-radius: 10px;
+        padding: 1rem 4rem;
+        background: #010101;
+    }
+
+    .more-btn a{
+        font-weight: 600;
+        color: #fff;
+        width: 100%;
+    }
+/* End General Style */
 
 /* Navbar Styles */
     nav{
-        width: 80%;
+        width: 90%;
         height: 65px;
         display: flex;
         align-items: center;
@@ -32,10 +53,12 @@
     }
 
     nav ul{
+        width: 80%;
         padding: 0 20px;
     }
 
     nav ul li{
+        width: 45%;
         display: inline-block;
         margin: 0 2px;
         text-align: center;
@@ -47,7 +70,7 @@
         color: #000;
         font-size: 15px;
         font-weight: 500;
-        padding: 10px 7rem;
+        padding: 1.3rem 6rem;
         text-decoration: none;
     }
 
@@ -322,71 +345,178 @@
         background: #EBF2F7;
     }
 
-    .car-grid .morecar-btn{
-        width: 25%;
-        margin: 1rem auto;
-        border-radius: 10px;
-        padding: 1rem 4rem;
-        background: #010101;
-    }
-
-    .car-grid .morecar-btn a{
-        font-weight: 600;
-        color: #fff;
-        width: 100%;
-    }
+    
     /* End Car Grid */
 /* End Why us section */
 
 /* How it Works section */
     .howit-works{
         width: 100%;
-        height: 70vh;
-        margin: 0;
-        padding: 0;
+        height: 60vh;
+        justify-content: space-around;
         background: #00C1AE;
         position: relative;
     }
 
-    .howit-works .dealer-card{
-        position: absolute;
-        top: -9rem;
-        width: 60%;
-        flex-direction: row;
-        background: #ffffff;
-        padding: 10px 3rem;
-        border-radius: 30px;
-    }
+    /* Dealer Card Style */
+        .howit-works .dealer-card{
+            position: absolute;
+            top: -9rem;
+            width: 60%;
+            height: 40%;
+            flex-direction: row;
+            justify-content: space-around;
+            background: #ffffff;
+            padding: 10px 2rem;
+            border-radius: 30px;
+        }
 
-    .howit-works .dealer-card .dealer-txt{
-        width: 50%;
-    }
+        .howit-works .dealer-card .dealer-txt{
+            width: 45%;
+            height: 100%;
+            justify-content: center;
+            text-align: center;
+        }
 
-    .howit-works .dealer-card .dealer-img{
-        width: 50%;
-        object-fit: cover;
-    }
+        .howit-works .dealer-card .dealer-txt h5{
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
 
-    .howit-works .howit-card{
-        width: 100%;
-        height: 100%;
-        flex-direction: row; 
-        justify-content: space-between;
-        background: brown;
-        overflow: hidden;
-    }
+        .howit-works .dealer-card .dealer-txt p{
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
 
-    .howit-works .howit-card .card{
-        width: 20rem;
-        height: 25rem;
-        background: #EBF2F7;
-        justify-content: space-between;
-        margin: 2rem;
-    }
+        .howit-works .dealer-card .dealer-txt a{
+            width: 100%;
+            padding: 1rem;
+            color: #000;
+            border: .1rem solid #333;
+            border-radius: 10px;
+            margin: .5rem 0;
+        }
 
-    .howit-card .card img{
-        width: 12rem;
-    }
+        .howit-works .dealer-card .dealer-img{
+            width: 50%;
+            height: 14rem;
+            object-fit: cover;
+        }
+    /* End Dealer Card Style */
 
+    /* How it Card */
+        .howit-works .howit-main h2{
+            text-align: center;
+        }
+
+        .howit-works .howit-card{
+            width: 100%;
+            height: 100%;
+            flex-direction: row; 
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .howit-works .howit-card .card{
+            width: 25rem;
+            height: 20rem;
+            justify-content: space-between;
+            margin: 2rem;
+        }
+
+        .howit-works .howit-card .card:nth-child(2){
+            flex-direction: column-reverse;
+        }
+
+        .howit-card .card .c-txt{
+            width: 85%;
+            height: 35%;
+            padding: 20px;
+            background: #CCF3EF;
+            border-radius: 10px;
+            box-shadow: 0.1rem 0.1rem 0.5rem #000;
+        }
+
+        .howit-card .card .c-txt h6{
+            font-size: 17px;
+        }
+
+        .howit-card .card .c-txt p{
+            font-size: 14px;
+        }
+
+        .howit-card .card img{
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    /* End How it Card */
 /* End How it Works section */
+
+/* About Us Section */
+    .aboutus{
+        width: 100%;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 11%;
+        background: brown;
+    }
+
+    /* About us Heads */
+        .aboutus-heads{
+            width: 80%;
+            height: 15rem;
+            justify-content: space-around;
+            margin: 3rem 0;
+        }
+
+        .aboutus-heads h2{
+            font-size: 28px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .aboutus-heads .flow-head{
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+            text-align: center;
+        }
+        .aboutus-heads .flow-head .small-p{
+            width: 12rem;
+            height: 7rem;
+        }
+
+        .aboutus-heads .flow-head .small-p p:first-child{
+            font-size: 30px;
+            font-weight: 600;
+            color: #00C1AE;
+        }
+
+        .aboutus-heads .flow-head .small-p p:last-child{
+            font-size: 13px;
+        }
+    /* End About us Heads */
+
+    /* What Clients say Card */
+        .whatclient-say{
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            background: blue;
+        }
+
+        .whatclient-say .client-card{
+            width: 25rem;
+            height: 20rem;
+            background: #333;
+        }
+    /* End What Clients say Card */
+
+/* End About Us Section */
+
 
