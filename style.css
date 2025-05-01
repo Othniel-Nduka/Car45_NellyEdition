@@ -24,9 +24,10 @@
 
     .more-btn{
         width: 25%;
-        margin: 1rem auto;
+        margin: 0 auto;
+        margin-bottom: 6rem;
         border-radius: 10px;
-        padding: 1rem 4rem;
+        padding: 1rem;
         background: #010101;
     }
 
@@ -45,6 +46,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 6%;
+        z-index: 10000;
     }
 
     nav .logo{
@@ -186,8 +188,12 @@
         }
 
         .notes .note-emoji{
+            width: 25%;
+            text-align: center;
+            border-radius: 50%;
             font-size: 20px;
             padding: 10px;
+            background: #e7f7f5;
         }
 
         .notes .note-head{
@@ -205,7 +211,7 @@
     /* Car Selection */
 
         .select-city{
-            width: 65%;
+            width: 70%;
             margin: auto;
             padding: 1rem;
             font-size: 16px;
@@ -215,25 +221,36 @@
             transition: all 0.8s;
         }
 
+        .select-city .city-btn{
+            padding: 10px;
+        }
 
-        .select-city .city-btn a{
-            font-size: 16px;
+
+        .select-city .city-btn{
+            font-size: 14px;
             color: #000;
             padding: 10px 20px;
             outline: 0.1rem solid #010101;
             border-radius: 10px;
+            transition: 0.5s all;
         }
 
         .select-city .city-btn:hover{
-            margin: 0 15px;
-            scale: 1.2;
+            background: none;
+            color: #000;
+            outline: 0.1rem solid #000;
             cursor: pointer;
         }
 
-        .select-city .city-btn .active{
+        .select-city .active{
             background: #010101;
             color: #fff;
             outline: none;
+        }
+
+        .select-city .city-btn.active:hover{
+            background: none;
+            outline: 0.1rem solid #000;
         }
     /* End Car Selection */
 
@@ -285,7 +302,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding-bottom: 10rem;
+        padding-bottom: 5rem;
         background: #EBF2F7;
         border-radius: 5rem 5rem 0 0;
     }
@@ -303,7 +320,7 @@
         margin: 2rem auto;
         display: grid;
         gap: 2rem;
-        grid-template-columns: repeat(4, 292px);
+        grid-template-columns: repeat(4, minmax(240px, 295px));
         align-items: center;
         justify-content: center;
     }
@@ -313,12 +330,14 @@
         height: 24.5rem;
         border-radius: 7px;
         overflow: hidden;
+        background: #fff;
         border: 0.1rem solid lightblue;
     }
 
     .car-grid .car-card .car-img{
         width: 100%;
         height: 55%;
+        object-fit: cover;
     }
 
     .car-grid .car-card p{
@@ -334,7 +353,6 @@
 
     .car-grid .car-card .car-loc{
         font-size: 12px;
-        padding-left: 1.5rem;
     }
 
     .car-grid .car-card .how-used{
@@ -343,6 +361,8 @@
 
     .car-grid .car-card .how-used p{
         background: #EBF2F7;
+        padding: 2px;
+        margin: 0 5px;
     }
 
     
@@ -352,8 +372,9 @@
 /* How it Works section */
     .howit-works{
         width: 100%;
-        height: 60vh;
-        justify-content: space-around;
+        height: 65vh;
+        align-items: center;
+        justify-content: center;
         background: #00C1AE;
         position: relative;
     }
@@ -367,7 +388,7 @@
             flex-direction: row;
             justify-content: space-around;
             background: #ffffff;
-            padding: 10px 2rem;
+            padding: 10px 1rem;
             border-radius: 30px;
         }
 
@@ -407,16 +428,22 @@
     /* End Dealer Card Style */
 
     /* How it Card */
+        .howit-works .howit-main{
+            position: relative;
+            top: 6rem;
+            align-items: center;
+            margin: 2rem 0;
+        }
         .howit-works .howit-main h2{
             text-align: center;
         }
 
         .howit-works .howit-card{
-            width: 100%;
+            width: 95%;
             height: 100%;
             flex-direction: row; 
             justify-content: space-between;
-            margin-top: 1rem;
+            align-items: center;
         }
 
         .howit-works .howit-card .card{
@@ -431,12 +458,12 @@
         }
 
         .howit-card .card .c-txt{
-            width: 85%;
-            height: 35%;
+            width: 87%;
+            height: 36%;
             padding: 20px;
             background: #CCF3EF;
             border-radius: 10px;
-            box-shadow: 0.1rem 0.1rem 0.5rem #000;
+            box-shadow: 0.3rem 0.3rem 2rem #000;
         }
 
         .howit-card .card .c-txt h6{
@@ -459,11 +486,11 @@
 /* About Us Section */
     .aboutus{
         width: 100%;
-        min-height: 100vh;
+        min-height: 80vh;
         align-items: center;
         justify-content: center;
-        padding: 1rem 11%;
-        background: brown;
+        padding: 1rem;
+        background: #fff;
     }
 
     /* About us Heads */
@@ -504,19 +531,545 @@
 
     /* What Clients say Card */
         .whatclient-say{
-            width: 100%;
+            width: 90%;
             flex-direction: row;
             justify-content: space-around;
-            background: blue;
+            margin: 2rem 0;
         }
 
         .whatclient-say .client-card{
-            width: 25rem;
-            height: 20rem;
-            background: #333;
+            width: 24rem;
+            height: 24rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 12px;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0.1rem 0.1rem 0.3rem #333;
+        }
+        .whatclient-say .client-card .profile{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .whatclient-say .client-card .profile .prof-txt{
+            width: 50%;
+        }
+        .whatclient-say .client-card .profile .prof-txt p:first-child{
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .whatclient-say .client-card .profile .prof-txt p:last-child{
+            font-size: 10px;
+            font-weight: 400;
+            margin-left: 0.8rem;
+            color: #333;
+        }
+
+        .whatclient-say .client-card .profile img{
+            width: 5rem;
+            margin-right: 10px;
+        }
+
+        .whatclient-say .client-card .client-txt p{
+            font-size: 13.5px;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            text-wrap: wrap;
+        }
+
+        .whatclient-say .client-card .date{
+            color: #333;
+            margin-top: 10px;
         }
     /* End What Clients say Card */
 
+    /* Selling Car Button */
+    .selling-cars{
+        width: 50%;
+        padding: 0.2rem 2rem;
+        margin: 1rem 0;
+        background: #fefeff;
+        box-shadow: 0.1rem 0.1rem 0.5rem #000;
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+
+    .selling-cars:hover{
+        box-shadow: inset 0.1rem 0.1rem 0.5rem #010101;
+        box-shadow: -0.1rem -0.1rem 0.5rem #010101;
+    }
+
+    .selling-cars a{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        color: #000;
+    }
+
+    .selling-cars a:active{
+        box-shadow: inset 0.1rem 0.1rem 0.5rem #010101;
+    }
+
 /* End About Us Section */
 
+/* Contact Us Section */
+    .contact-section{
+        width: 100%;
+        height: 50vh;
+        background: #00C1AE;
+    }
 
+    .contact-section .contact{
+        width: 70%;
+        min-height: 50%;
+        padding: 1rem 2rem;
+        margin: 2rem 0;
+        border-radius: 20px;
+        background: #fff;
+    }
+
+    .contact-section .contact .chead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .contact-section .contact .chead .buttons a{
+        width: 11rem;
+        display: inline-block;
+        padding: 1rem;
+        margin: 0.2rem;
+        color: #fff;
+        background: #000;
+        text-align: center;
+        border: none;
+        border-radius: 15px;
+        transition: all 0.5s;
+    }
+
+    .contact-section .contact .chead .buttons a:hover{
+        background: none;
+        color: #000;
+        outline: 0.1rem solid #000;
+    }
+
+    .contact-section .contact .chead .buttons a:last-child{
+        background: none;
+        color: #000;
+        outline: 0.1rem solid #000;
+    }
+
+    .contact-section .contact .chead .buttons a:last-child:hover{
+        background: #000;
+        color: #fff;
+        border: none;
+    }
+
+    .contact-section .contact table{
+        width: 100%;
+    }
+
+    .contact-section .contact table th, tr, td{
+        text-align: left;
+    }
+
+    th{color: #888}
+
+    td{text-decoration: underline;}
+
+    .contact-section .countries img{
+        width: 2rem;
+        border: 0.15rem solid #fff;
+        border-radius: 50%;
+    }
+/* End Contact Us Section */
+
+/* Responsive Designs for Max Width of 1200px */
+    @media (max-width: 1200px) {
+        /* Car Grid */
+        .car-grid .container{
+            gap: 1.5rem;
+            grid-template-columns: repeat(4, minmax(240px, 260px));
+        }
+        /* End Car Grid */
+
+        /* How it Works Section */
+            .howit-works{
+                height: 70vh
+            }
+
+            .howit-works .howit-main{
+                width: 100%;
+            }
+        /* End How it Works Section */
+
+        /* What Clients say Card */
+            .whatclient-say{width: 95%;}
+            .whatclient-say .client-card{
+                width: 20.5rem;
+                height: 26rem;
+            }
+        /* End What Clients say Card */
+
+    }
+
+/* End Responsive Designs for Max Width of 1200px */
+
+
+
+
+/* Responsive Designs for Max width of 1000px */
+@media (max-width: 1000px) {
+    body{
+        font-size: 62.5%;
+    }
+
+    .more-btn{
+        margin-bottom: 4rem;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    nav ul li a{font-size: 12px;}
+
+    /* Head Section */
+        .head-section{height: 85vh; overflow: hidden;}
+
+        .head-container{
+            display: flex;
+            width: 100%;
+        }
+
+        .head-img-1{
+            position: relative;
+            left: -4rem;
+            top: 5rem;
+        }
+
+        .head-img-2{
+            position: relative;
+            top: -5rem;
+            right: -2rem;
+        }
+
+        .head-container .info{
+            position: relative;
+            top: 0;
+            left: 40%;
+            top: 50%;
+            transform: translateX(40%) translateY(50%);
+        }
+
+    /* End Head Section */
+
+
+    /* Why Us Section */
+
+        .whyus-notes{
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 0.2rem solid #e7f7f5;
+        }
+
+        .notes{
+            width: 75%;
+            height: 7rem;
+            display: flex;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .notes .note-emoji{
+            width: 10%;
+            height: 50%;
+        }
+
+        .notes .text{margin: 0 10px; width: 90%;}
+
+        .notes .note-head{margin: 0;}
+
+        .notes .note-head{font-size: 16px;}
+    /* End Why Us Section */
+
+    /* Select City Stylel */
+
+        .select-city{width: 80%;}
+        .select-city .city-btn{
+            font-size: 10px;
+        }
+    /* End Select City Stylel */
+
+
+
+    /* Car Grid */
+        .car-grid{width: 100%; justify-content: space-between;}
+
+        .car-grid .container{
+            width: 100%;
+            gap: 1.5rem;
+            grid-template-columns: repeat(3, 250px);
+        }
+
+        .car-grid .car-card{
+            width: 100%;
+            height: 22rem;
+            font-size: 15px;
+            border-radius: 7px;
+            overflow: hidden;
+            border: 0.1rem solid lightblue;
+    }
+    /* End Car Grid */
+
+
+    /* How it works section */
+        .howit-works{width: 100%; height: 1200px;}
+
+        .howit-works .dealer-card{
+            top: -7rem;
+            width: 60%;
+            height: 17%;
+            padding: 1rem;
+            font-size-adjust: 60%;
+        }
+
+        .howit-works .dealer-card .dealer-txt h5{font-size: 14px;}
+
+        .howit-works .dealer-card .dealer-txt p{font-size: 12px;}
+
+        .howit-works .dealer-card .dealer-img{
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .howit-works .howit-main{
+            height: 75%;
+            top: 5rem; 
+        }
+
+        .howit-works .howit-main h2{
+            font-size: 25px;
+        }
+
+        .howit-works .howit-main .howit-card{
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            margin-bottom: 5rem;
+        }
+
+        .howit-works .howit-main .howit-card .card{
+            width: 40rem;
+            height: 16rem;
+            padding: 0;
+            flex-direction: row;
+            align-self: flex-end;
+        }
+
+        .howit-works .howit-card .card:nth-child(1){
+            width: 50rem;
+        }
+
+        .howit-works .howit-card .card:nth-child(2){
+            align-self: flex-start;
+            flex-direction:  row-reverse;
+        }
+
+        .howit-works .howit-main .howit-card .card .c-txt{
+            position: relative;
+            left: 1.5rem;
+        }
+
+        .howit-works .howit-card .card:nth-child(2) .c-txt{
+            left: -1.5rem;
+        }
+
+        .howit-works .howit-main .howit-card .card .c-txt h6{
+            font-size: 14px;
+        }
+
+        .howit-works .howit-main .howit-card .card .c-txt p{
+            font-size: 10px;
+        }
+
+        .howit-works .card img{
+            height: 100%;
+            width: 70%;
+        }
+    /* Ehd How it works section */
+
+    /* whatclients say */
+
+        .whatclient-say{width: 100%;}
+        .whatclient-say .client-card{
+            width: 16rem;
+            height: 27rem;
+        }
+        /* .whatclient-say .client-card .profile{flex-direction: column;} */
+
+        .whatclient-say .client-card .profile .prof-txt p:first-child{
+            font-size: 10px;
+        }
+
+        .whatclient-say .client-card .client-txt p{
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .selling-cars a{
+            font-size: 14px;
+        }
+    /* End whatclients say */
+
+    /* Contact Us Section */
+        .contact-section{
+            font-size: 13px;
+            line-height: 1.3;
+        }
+    /* End Contact Us Section */
+}
+
+
+/* Max Width of 400px */
+    @media (max-width: 400px) {
+        .more-btn{
+            width: 85%;
+        }
+
+       /* Nav Styles */
+            nav{
+                width: 100%;
+                height: 7rem;
+                padding: 0;
+                flex-direction: column;
+            }
+
+            nav ul{width: 100%;}
+
+            nav ul li a{
+                width: 54%;
+                padding: 10px;
+            }
+       /* End Nav Styles */
+
+       /* Home Section */
+            .head-section{height: 80vh}
+
+            .head-img-1{
+                width: 12rem;
+                height: 10rem;
+                left: 5.5rem;
+                z-index: 1;
+            }
+
+            .head-img-2{
+                width: 18rem;
+                height: 15rem;
+                top: -7rem;
+                right: 4rem;
+                object-fit: cover;
+                z-index: 0;
+            }
+
+            .head-container .info{
+                width: 80vw;
+                top: 40%;
+                transform: translateX(10%) translateY(40%);
+                text-align: center;
+            }
+
+            .head-container .info .head-btn{
+                font-size: 12px;
+            }
+       /* End Home Section */
+
+       /* Why Us Section */
+            .whyus-notes{
+                width: 100%;
+                padding: 0;
+            }
+            .whyus-notes .notes{
+                width: 100%;
+                height: 10rem;
+                margin: 5px 0;
+            }
+
+            .whyus-notes .notes .text{
+                width: 80%;
+            }
+            .whyus-notes .notes .note-emoji{width: 15%; height: 30%;}
+       /* End Why Us Section */
+
+       /* Select city */
+            .select-city{width: 100%; padding: 0; flex-wrap: wrap; justify-content: center;}
+
+            .select-city .city-btn{margin: 5px; display: block;}
+       /* End Select city */
+
+       /* Car Logo Section */
+            .logo-grid{
+                width: 90%;
+                margin: 0 auto;
+                grid-template-columns: repeat(4, 70px);
+                grid-template-rows: 45px 100px 100px;
+                margin-bottom: 1rem;
+            }
+
+            .logo-grid .lAmount{
+                border-radius: 10px;
+            }
+
+            .logo-grid .lg img{
+                width: 50px;
+            }
+       /* End Car Logo Section */
+
+        /* Car Grid */
+            .card-grid{border-radius: 10px;}
+
+            .car-grid .container{
+                grid-template-columns: repeat(2, 170px);
+                gap: 0.2rem;
+            }
+
+            .car-grid .car-card{margin: 10px 0;}
+
+            .car-grid .car-card .car-img{height: 40%;}
+
+            .car-grid .car-card .car-loc{font-size: 10px;}
+
+            .car-grid .car-card .how-used{
+                font-size: 10px; 
+                flex-direction: column;
+                /* justify-content: space-between; */
+                width: 44%;
+            }
+
+            .car-grid .car-card .how-used p{margin: 5px; margin-left: 10px;}
+        /* End Car Grid */
+
+        /* About Us Section */
+            .howit-works .dealer-card{
+                width: 90%;
+                height: 60vh;
+                flex-direction: column-reverse;
+            }
+
+            .howit-works .dealer-txt, .howit-works .dealer-img{
+                width: 90%;
+            }
+        /* End About Us Section */
+        
+
+
+    }
+/* End Max Width of 400px */
