@@ -16,3 +16,4 @@ Link to the live site : (https://car45nellyedition.vercel.app/)
 ## Author
 My Link
 - Frontend Mentor - [@Othniel-Nduka](https://www.frontendmentor.io/profile/Othniel-Nduka)
+- Insta - [@thegreatoniel](https://www.instagram.com/thegreatoniel/)
