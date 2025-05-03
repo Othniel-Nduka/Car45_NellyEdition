@@ -1,7 +1,8 @@
 # My Clone of the car website Car45
 
 This has been  quite the project, I would majorly like to say that the responsive design
-was the most annoying part of it all.
+was the most annoying part of it all. I would now like to update that I would be dropping this project for
+a while and focus on other things for now.
 
 ## Built with
 - HTML5 markup
