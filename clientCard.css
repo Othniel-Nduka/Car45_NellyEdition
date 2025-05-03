@@ -1,0 +1,25 @@
+.aboutus h3{
+    font-size: 15px;
+}
+
+.whatclient-say .client-card{
+    width: 20rem;
+    margin: 0 0.5rem;
+}
+
+.whatclient-say::-webkit-scrollbar{
+    height: 5px;
+}
+
+.whatclient-say::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+
+.whatclient-say::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+}
+
+.whatclient-say::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
