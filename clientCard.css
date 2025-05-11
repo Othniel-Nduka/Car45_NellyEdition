@@ -3,23 +3,34 @@
 }
 
 .whatclient-say .client-card{
-    width: 20rem;
-    margin: 0 0.5rem;
+    width: 25rem;
+    margin: 0 0.7rem;
 }
 
 .whatclient-say::-webkit-scrollbar{
-    height: 5px;
+    height: 10px;
 }
 
 .whatclient-say::-webkit-scrollbar-track{
     background: #f1f1f1;
+    border-radius: 10px;
 }
 
 .whatclient-say::-webkit-scrollbar-thumb{
-    background: #888;
+    background: #999;
     border-radius: 10px;
 }
 
 .whatclient-say::-webkit-scrollbar-thumb:hover{
-    background: #555;
+    background: #888;
+}
+
+
+.whatclient-say .client-card .profile{
+    margin-bottom: 0.8rem;
+}
+
+.whatclient-say .client-card .client-txt p{
+    font-size: 13px;
+    line-height: 1.1rem;
 }

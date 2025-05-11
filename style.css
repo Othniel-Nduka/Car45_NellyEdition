@@ -152,7 +152,7 @@
     .whyus-section{
         width: 100%;
         padding: 5%;
-        min-height: 50vh;
+        max-height: 55vh;
         background: #fff;
     }
 
@@ -259,7 +259,7 @@
             width: 60%;
             margin: 20px auto;
             display: grid;
-            grid-template-columns: repeat(4,  1fr);
+            grid-template-columns: repeat(4,  minmax(70px, 1fr));
             grid-template-rows:  65px 150px 150px;
             grid-template-areas: 
             "   text1   text2   text3   text4"
@@ -302,6 +302,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        padding-top: 1rem;
         padding-bottom: 5rem;
         background: #EBF2F7;
         border-radius: 5rem 5rem 0 0;
@@ -316,43 +317,50 @@
     }
 
     .car-grid .container{
-        width: 100%;
+        width: 95%;
         margin: 2rem auto;
         display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(4, minmax(240px, 295px));
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
         align-items: center;
         justify-content: center;
     }
 
     .car-grid .car-card{
         width: 100%;
-        height: 24.5rem;
+        height: 20rem;
         border-radius: 7px;
         overflow: hidden;
         background: #fff;
         border: 0.1rem solid lightblue;
+
     }
 
     .car-grid .car-card .car-img{
         width: 100%;
         height: 55%;
         object-fit: cover;
+        transition: scale 0.5s;
+    }
+
+    .car-grid .car-card:hover .car-img{
+        scale: 1.1;
     }
 
     .car-grid .car-card p{
-        padding: 10px 10px 5px 10px;
+        padding: 5px;
         color: #333;
     }
 
     .car-grid .car-card .car-price{
+        font-size: 15px;
         color: #00C1AE;
         text-shadow: -.5px -.5px #00C1AE;
         font-weight: 700;
     }
 
     .car-grid .car-card .car-loc{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .car-grid .car-card .how-used{
@@ -362,7 +370,6 @@
 
     .car-grid .car-card .how-used p{
         background: #EBF2F7;
-        padding: 2px;
         margin: 0 5px;
     }
 
@@ -469,7 +476,7 @@
         }
 
         .howit-card .card .c-txt h6{
-            font-size: 17px;
+            font-size: 15px;
         }
 
         .howit-card .card .c-txt p{
@@ -540,10 +547,9 @@
         }
 
         .whatclient-say .client-card{
-            width: 24rem;
-            height: 24rem;
+            width: 10rem;
+            height: 30rem;
             padding: 1rem;
-            margin: 1rem 0;
             font-size: 12px;
             letter-spacing: 2px;
             border-radius: 10px;
@@ -698,22 +704,22 @@
 
 /* Responsive Designs for Max Width of 1300px */
     @media (max-width: 1300px) {
-        .head-section{height: 75vh;}
+        nav{width: 100%;}
 
-        /* Car Grid */
-        .car-grid .container{
-            gap: 1.5rem;
-            grid-template-columns: repeat(4, minmax(240px, 270px));
-        }
-        /* End Car Grid */
+        .head-section{height: 55vh;}
+
 
         /* How it Works Section */
             .howit-works{
-                height: 90vh
+                height: 75vh
             }
 
             .howit-works .howit-main{
                 width: 100%;
+            }
+
+            .howit-works .dealer-card{
+                height: 15rem;
             }
 
             .howit-works .dealer-card .dealer-txt p{
@@ -724,7 +730,7 @@
         /* What Clients say Card */
             .whatclient-say{width: 95%;}
             .whatclient-say .client-card{
-                width: 21rem;
+                width: 30rem;
                 height: 26rem;
             }
         /* End What Clients say Card */
@@ -816,19 +822,10 @@
         .select-city .city-btn{
             font-size: 10px;
         }
-    /* End Select City Stylel */
-
+    /* End Select City Style */
 
 
     /* Car Grid */
-        .car-grid{width: 100%; justify-content: space-between;}
-
-        .car-grid .container{
-            width: 100%;
-            gap: 1.5rem;
-            grid-template-columns: repeat(3, 250px);
-        }
-
         .car-grid .car-card{
             width: 100%;
             height: 22rem;
@@ -949,11 +946,11 @@
 }
 
 
-/* Max Width of 350px */
-    @media (max-width: 300px) {
+/* Max Width of 400px */
+    @media (max-width: 400px) {
 
         .more-btn{
-            width: 85%;
+            width: 90%;
         }
 
        /* Nav Styles */
@@ -977,7 +974,7 @@
        /* End Nav Styles */
 
        /* Home Section */
-            .head-section{height: 75vh}
+            .head-section{height: 60vh}
 
             .head-img-1{
                 width: 15rem;
@@ -999,49 +996,58 @@
             .head-container .info{
                 width: 90vw;
                 top: 50%;
-                transform: translateX(9vw) translateY(50%);
-                margin: 0 auto;
+                left: 20%;
+                transform: translateX(25%) translateY(70%);
+                margin: auto;
                 text-align: center;
             }
 
             .head-container .head-txt{font-size: 30px;}
 
-            .head-container .head-p{font-size: 12px;}
+            .head-container .head-p{font-size: 15px;}
 
             .head-container .info .head-btn{
-                font-size: 12px;
+                font-size: 18px;
                 width: 100%;
             }
        /* End Home Section */
 
        /* Why Us Section */
+            .whyus-section{
+                margin-bottom: 5rem;
+            }
+
             .whyus-notes{
                 width: 100%;
-                padding: 0;
+                margin-top: 1rem;
             }
             .whyus-notes .notes{
                 width: 100%;
-                height: 10rem;
+                height: 9rem;
                 margin: 5px 0;
+                align-items: center;
             }
 
             .whyus-notes .notes .text{
                 width: 80%;
             }
+
+            .whyus-notes .notes .text .note-p, .notes .text .note-head{font-size: 18px;}
             .whyus-notes .notes .note-emoji{width: 15%; height: 30%;}
        /* End Why Us Section */
 
        /* Select city */
-            .select-city{width: 100%; padding: 0; flex-wrap: wrap; justify-content: center;}
+            .select-city{width: 100%; padding: 0; flex-wrap: wrap; justify-content: center; margin: 3rem 0;}
 
-            .select-city .city-btn{margin: 5px; display: block;}
+            .select-city p{font-size: 20px;}
+
+            .select-city .city-btn{margin: 5px; display: block; font-size: 18px;}
        /* End Select city */
 
        /* Car Logo Section */
             .logo-grid{
                 width: 90%;
-                margin: 0 auto;
-                grid-template-columns: repeat(4, 70px);
+                margin: auto;
                 grid-template-rows: 45px 100px 100px;
                 margin-bottom: 1rem;
             }
@@ -1056,21 +1062,19 @@
        /* End Car Logo Section */
 
         /* Car Grid */
-            .car-grid{border-radius: 1.5rem 1.5rem 0 0; padding-bottom:10rem;}
-
-            .car-grid .container{
-                grid-template-columns: repeat(2, 160px);
-                gap: 0.5rem;
+            .car-grid{
+                border-radius: 1.5rem 1.5rem 0 0; 
+                padding-bottom:10rem;
             }
 
             .car-grid .car-card{margin: 10px 0;}
 
-            .car-grid .car-card .car-img{height: 40%;}
+            .car-grid .car-card .car-img{height: 50%;}
 
-            .car-grid .car-card .car-loc{width: 100%; font-size: 10px;}
+            .car-grid .car-card .car-loc{width: 100%; font-size: 12px;}
 
             .car-grid .car-card .how-used{
-                font-size: 10px; 
+                font-size: 12px; 
                 flex-direction: column;
                 width: 50%;
             }
@@ -1080,11 +1084,11 @@
         /* End Car Grid */
 
         /* How it Works Section */
-            .howit-works{min-height: 100vh; justify-content: space-around;}
+            .howit-works{height: 108vh; justify-content: space-evenly; padding-bottom: 1.5rem;}
             .howit-works .dealer-card{
                 width: 90%;
                 top: -12rem;
-                height: 50vh;
+                height: 23rem;
                 flex-direction: column-reverse;
             }
 
@@ -1132,7 +1136,7 @@
         
         /* About Us Section */
 
-            .aboutus-heads{width: 100%; height: auto; margin: 2rem 0;}
+            .aboutus-heads{width: 100%; height: auto; margin: 2rem 0; overflow: hidden;}
             .aboutus-heads h2{font-size: 20px;}
             .aboutus-heads .flow-head{
                 flex-direction: column; 
@@ -1149,19 +1153,63 @@
             /* What Clients Say */
                 .whatclient-say{
                     width: 100%;
+                    padding: 1.5rem 0;
                     overflow: auto;
                 }
-
-                .whatclient-say .client-card{
-                    display: inline-block;
-                }
-
-                /* Client Card */
             /* End What Clients Say */
 
+            .selling-cars{width: 100%;}
         /* End About Us Section */
 
+        /* Contact Us Section */
+        .contact-section .contact{width: 90%;}
 
+        .contact-section .contact .chead{
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 auto 2rem auto;
+        }
 
+        .contact .chead .buttons{width: 12rem;}
+
+        .contact .chead .buttons a{font-size: 18px;}
+        /* End Contact Us Section */
     }
 /* End Max Width of 400px */
+
+/* Max Width 300px */
+@media (max-width: 300px) {
+    /* Head Section */
+        .head-section{height: 60vh}
+        .head-container .info{
+            transform: translateX(40%) translateY(55%);
+        }
+        .head-container .head-txt{font-size: 25px;}
+        .head-container .info .head-btn{font-size: 12.5px;}
+    /* End Head Section */
+
+    /* Car Logo Section */
+        .logo-grid{
+            grid-template-columns: 50px 50px 50px;
+            grid-template-rows: 50px 120px 120px;
+        }
+    /* End Car Logo Section */
+
+    /* Car Grid */
+        .car-grid{
+            padding: 1rem 2rem 5rem 2rem;
+        }
+        .car-grid .container{margin-top: 0; margin-bottom: 2rem;}
+    /* End Car Grid */
+
+    /* How it Works Section */
+        .howit-works .dealer-card{height: 22rem;}
+        .howit-works .howit-main .howit-card .card{
+            width: 15rem;
+        }
+    /* End How it Works Section */
+
+
+}
+/* End Max Width 300px */
+
