@@ -950,7 +950,8 @@
 
 
 /* Max Width of 350px */
-    @media (max-width: 350px) {
+    @media (max-width: 300px) {
+
         .more-btn{
             width: 85%;
         }
@@ -963,7 +964,7 @@
                 flex-direction: column;
             }
 
-            nav ul{width: 100%;}
+            nav ul{width: 100%; position: sticky;}
 
             nav ul li{
                 padding: 10px 0;
