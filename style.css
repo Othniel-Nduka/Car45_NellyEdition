@@ -179,9 +179,9 @@
     /* Notes Style Section */
         .whyus-notes{
             width: 87%;
-            padding: 3%;
-            margin: auto;
-            margin-bottom: 20px;
+            padding: 3% 3% 0 3%;
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -219,8 +219,7 @@
 
         .select-city{
             width: 70%;
-            margin: auto;
-            padding: 1rem;
+            margin: 2rem auto;
             font-size: 16px;
             display: flex;
             align-items: center;
@@ -388,7 +387,6 @@
 /* How it Works section */
     .howit-works{
         width: 100%;
-        height: 65vh;
         align-items: center;
         justify-content: center;
         background: #00C1AE;
@@ -400,7 +398,7 @@
             position: absolute;
             top: -9rem;
             width: 60%;
-            height: 40%;
+            height: 15rem;
             flex-direction: row;
             justify-content: space-around;
             background: #ffffff;
@@ -445,6 +443,7 @@
 
     /* How it Card */
         .howit-works .howit-main{
+            width: 98%;
             position: relative;
             top: 6rem;
             align-items: center;
@@ -692,13 +691,18 @@
         width: 100%;
     }
 
-    .contact-section .contact table th, tr, td{
-        text-align: left;
+
+    .contact-section .footer-links{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
     }
+    .contact-section .footer-links{color: #888;}
 
-    th{color: #888}
-
-    td{text-decoration: underline;}
+    .contact-section .footer-links li a{
+        color:#000;
+        text-decoration: underline;
+    }
 
     .contact-section .countries .count-logo {
         width: 2rem;
@@ -1036,7 +1040,7 @@
 
        /* Why Us Section */
             .whyus-section{
-                margin-bottom: 5rem;
+                margin-bottom: 34rem;
             }
 
             .whyus-notes{
@@ -1059,7 +1063,12 @@
        /* End Why Us Section */
 
        /* Select city */
-            .select-city{width: 100%; padding: 0; flex-wrap: wrap; justify-content: center; margin-top: 24rem; margin-bottom: 2rem;}
+            .select-city{
+                width: 100%;
+                padding: 0; 
+                flex-wrap: wrap; 
+                justify-content: center;
+            }
 
             .select-city p{font-size: 20px;}
 
@@ -1090,7 +1099,7 @@
             }
 
             .car-grid .car-card{
-                width: 270px;
+                width: 220px;
                 margin: 10px auto;
             }
 
@@ -1193,17 +1202,22 @@
         /* End About Us Section */
 
         /* Contact Us Section */
+        .contact-section{height: auto;}
         .contact-section .contact{width: 90%;}
 
         .contact-section .contact .chead{
             flex-direction: column;
             justify-content: space-between;
-            margin: 0 auto 2rem auto;
+            margin: 1rem auto 2rem auto;
         }
 
-        .contact .chead .buttons{width: 12rem;}
+        .contact .chead .buttons{width: 12rem; margin-top: 1rem;}
 
         .contact .chead .buttons a{font-size: 18px;}
+
+        .contact .footer-links{flex-direction: column;}
+
+        .contact-section .footer-links .foot-col{margin: 1rem 0;}
         /* End Contact Us Section */
     }
 /* End Max Width of 400px */
